@@ -1,15 +1,17 @@
 #include <stdio.h>
 
 /*
-Desenvolver uma função recursiva
-que exiba todos os múltiplos do número N,
-inferiores ou iguais ao valor V.
+    Desenvolver uma função recursiva
+    que exiba todos os múltiplos do número N,
+    inferiores ou iguais ao valor V.
 */
 
 void exibir(int n, int v){
-    if(n <= v && n >= 0 ){
-        printf("%d ", v);
-        exibir(n, v - n);
+    if(n <= v){
+        printf("%d ", n);
+        exibir(n + n, v);
+    } else {
+        printf("%d", 0);
     }
 }
 
